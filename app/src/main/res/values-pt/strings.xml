@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Configurações</string>
+    <string name="language">Língua</string>
+    <string name="The_language_of_the_app">O idioma do aplicativo muda automaticamente</string>
+    <string name="make_search_in_web">Pesquise ou insira o endereço</string>
+    <string name="search_engine">Motor De Pesquisa</string>
+    <string name="downloading">Baixando...</string>
+    <string name="error_occured">endereço não encontrado</string>
+    <string name="browser_couldnot_reach_the_adress">O navegador não conseguiu acessar o endereço da web fornecido.</string>
+    <string name="you_can_try_to_check_internet">-You can try to check your internet connection or you can try to check the provided web adress.</string>
+</resources>

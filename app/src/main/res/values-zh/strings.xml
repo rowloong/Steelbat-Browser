@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">设置</string>
+    <string name="language">语</string>
+    <string name="The_language_of_the_app">应用程序的语言自动更改</string>
+    <string name="make_search_in_web">搜索或输入地址</string>
+    <string name="search_engine">搜索引擎</string>
+    <string name="downloading">正在下载...</string>
+    <string name="error_occured">未找到地址</string>
+    <string name="browser_couldnot_reach_the_adress">浏览器无法访问提供的网址。</string>
+    <string name="you_can_try_to_check_internet">- 您可以尝试检查您的互联网连接，或者您可以尝试检查提供的网址。</string>
+</resources>

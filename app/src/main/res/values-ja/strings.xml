@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">設定</string>
+    <string name="language">言語</string>
+    <string name="The_language_of_the_app">アプリケーションの言語は自動的に変更されます</string>
+    <string name="make_search_in_web">住所を検索または入力する</string>
+    <string name="search_engine">検索エンジン</string>
+    <string name="downloading">ダウンロード中...</string>
+    <string name="error_occured">住所が見つかりません</string>
+    <string name="browser_couldnot_reach_the_adress">ブラウザは指定されたWebアドレスに到達できませんでした。</string>
+    <string name="you_can_try_to_check_internet">-インターネット接続を確認するか、提供されているWebアドレスを確認することができます。</string>
+</resources>

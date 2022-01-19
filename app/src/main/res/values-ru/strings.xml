@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Настройки</string>
+    <string name="language">Язык</string>
+    <string name="The_language_of_the_app">Язык приложения меняется автоматически</string>
+    <string name="make_search_in_web">Найдите или введите адрес</string>
+    <string name="search_engine">Поисковый движок</string>
+    <string name="downloading">Скачивание ...</string>
+    <string name="error_occured">Адрес не найден</string>
+    <string name="browser_couldnot_reach_the_adress">Браузеру не удалось получить доступ к предоставленному веб-адресу.</string>
+    <string name="you_can_try_to_check_internet">-Вы можете попробовать проверить свое интернет-соединение или проверить предоставленный веб-адрес.</string>
+</resources>

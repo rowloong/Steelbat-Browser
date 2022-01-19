@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Ayarlar</string>
+    <string name="language">Dil</string>
+    <string name="The_language_of_the_app">Uygulamanın dili kendiliğinden değişmektedir</string>
+    <string name="make_search_in_web">Arama Yapın Veya Adresi Yazın</string>
+    <string name="search_engine">Arama Motoru</string>
+    <string name="downloading">İndiriliyor...</string>
+    <string name="error_occured">Adres Bulunamadı</string>
+    <string name="browser_couldnot_reach_the_adress">Tarayıcı sağlanan web adresine ulaşamadı.</string>
+    <string name="you_can_try_to_check_internet">-İnternet bağlantınızı kontrol etmeyi deneyebilir veya verilen web adresini kontrol etmeyi deneyebilirsiniz.</string>
+</resources>
