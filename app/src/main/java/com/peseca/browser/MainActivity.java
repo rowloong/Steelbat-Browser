@@ -7,6 +7,9 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -21,10 +24,12 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private String url_webview;
     public boolean isCameFromExternalApp = false;
     public String arama_sonuc;
+    public boolean isNewerVersionAvailable;
 
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -99,6 +105,13 @@ public class MainActivity extends AppCompatActivity {
         //Getting Shared Preferences
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         search_engine = sharedPreferences.getString(SEARCH_ENGINE, "Google");
+
+        isNewerVersionAvailable = sharedPreferences.getBoolean("isNewerVersionAvailable", false);
+        if (isNewerVersionAvailable) {
+            goToNewVersionActivity();
+        } else {
+            isThereANewVersion();
+        }
 
         // Download Listener
         webView_main.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
@@ -305,6 +318,24 @@ public class MainActivity extends AppCompatActivity {
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
             makeSearch();
         }
+    }
+
+    public void isThereANewVersion() {
+        String currentMonth = (new SimpleDateFormat("MM", Locale.getDefault()).format(new Date()));
+        String currentYear = (new SimpleDateFormat("yyyy", Locale.getDefault()).format(new Date()));
+        int currentYearAndMonth = Integer.parseInt(currentYear+currentMonth);
+        if (currentYearAndMonth > 202208){
+            SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("isNewerVersionAvailable", true);
+            editor.apply();
+            goToNewVersionActivity();
+        }
+    }
+
+    public void goToNewVersionActivity() {
+        Intent goToNewVersionActivity = new Intent(this, NewVersionActivity.class);
+        startActivity(goToNewVersionActivity);
     }
 }
 

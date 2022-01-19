@@ -9,4 +9,5 @@
     <string name="error_occured">未找到地址</string>
     <string name="browser_couldnot_reach_the_adress">浏览器无法访问提供的网址。</string>
     <string name="you_can_try_to_check_internet">- 您可以尝试检查您的互联网连接，或者您可以尝试检查提供的网址。</string>
+    <string name="new_version">此应用程序的较新版本可用。 请在使用前升级它。</string>
 </resources>

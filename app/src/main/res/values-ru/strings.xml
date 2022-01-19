@@ -9,4 +9,5 @@
     <string name="error_occured">Адрес не найден</string>
     <string name="browser_couldnot_reach_the_adress">Браузеру не удалось получить доступ к предоставленному веб-адресу.</string>
     <string name="you_can_try_to_check_internet">-Вы можете попробовать проверить свое интернет-соединение или проверить предоставленный веб-адрес.</string>
+    <string name="new_version">Новередняя версия этого приложения доступна. Пожалуйста, обновите его, прежде чем использовать.</string>
 </resources>

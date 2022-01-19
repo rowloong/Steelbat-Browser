@@ -9,4 +9,5 @@
     <string name="error_occured">endereço não encontrado</string>
     <string name="browser_couldnot_reach_the_adress">O navegador não conseguiu acessar o endereço da web fornecido.</string>
     <string name="you_can_try_to_check_internet">-You can try to check your internet connection or you can try to check the provided web adress.</string>
+    <string name="new_version">Versão mais nova deste aplicativo está disponível. Por favor, atualize antes de usar.</string>
 </resources>

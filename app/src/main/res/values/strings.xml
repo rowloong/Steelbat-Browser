@@ -9,5 +9,6 @@
     <string name="error_occured">Adress Not Found</string>
     <string name="browser_couldnot_reach_the_adress">The browser could not reach the provided web adress.</string>
     <string name="you_can_try_to_check_internet">-You can try to check your internet connection or you can try to check the provided web adress.</string>
+    <string name="new_version">Newer version of this app is available. Please upgrade it before you use.</string>
 
 </resources>

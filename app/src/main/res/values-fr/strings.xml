@@ -9,4 +9,5 @@
     <string name="error_occured">Adresse introuvable</string>
     <string name="browser_couldnot_reach_the_adress">Le navigateur n\'a pas pu atteindre l\'adresse Web fournie.</string>
     <string name="you_can_try_to_check_internet">-Vous pouvez essayer de vérifier votre connexion Internet ou vous pouvez essayer de vérifier l\'adresse Web fournie.</string>
+    <string name="new_version">La version plus récente de cette application est disponible. Veuillez la mettre à niveau avant d\'utiliser.</string>
 </resources>

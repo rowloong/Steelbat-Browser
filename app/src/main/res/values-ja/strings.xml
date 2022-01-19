@@ -9,4 +9,5 @@
     <string name="error_occured">住所が見つかりません</string>
     <string name="browser_couldnot_reach_the_adress">ブラウザは指定されたWebアドレスに到達できませんでした。</string>
     <string name="you_can_try_to_check_internet">-インターネット接続を確認するか、提供されているWebアドレスを確認することができます。</string>
+    <string name="new_version">このアプリの新しいバージョンは利用可能です。 使用する前にアップグレードしてください。</string>
 </resources>

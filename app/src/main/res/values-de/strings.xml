@@ -9,4 +9,5 @@
     <string name="error_occured">Adresse nicht gefunden</string>
     <string name="browser_couldnot_reach_the_adress">Der Browser konnte die angegebene Webadresse nicht erreichen.</string>
     <string name="you_can_try_to_check_internet">-Sie können versuchen, Ihre Internetverbindung zu überprüfen, oder Sie können versuchen, die angegebene Webadresse zu überprüfen.</string>
+    <string name="new_version">Die neuere Version dieser App ist verfügbar. Bitte aktualisieren Sie es, bevor Sie verwenden.</string>
 </resources>
