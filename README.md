@@ -13,7 +13,7 @@ An android browser that is fast and privacy-conscious. No-logs and no-history pl
 
 # Specifics and Details
 
-* This browser has no-logs and no-history. When you close the app your history deletes instantly. And it has cool UI that has turqouise and light blue colors.
+* This browser has no-logs and no-history. When you turn off the app, your history is deleted immediately . And it has cool UI that has turqouise and light blue colors.
 * 9 Language Support: \
   1-English \
   2-Turkish \
