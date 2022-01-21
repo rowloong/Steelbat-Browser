@@ -84,19 +84,17 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="90dp"
-            android:cursorVisible="true"
             android:hint="@string/make_search_in_web"
             android:imeOptions="actionSearch"
             android:inputType="textUri"
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:textColor="#000000"
-            android:textColorHighlight="@color/teal_200"
+            android:textColorHighlight="@color/arkaplan"
             android:textColorHint="@color/black"
-            android:textSelectHandle="@color/black"
-            android:textSelectHandleLeft="@color/black"
-            android:textSelectHandleRight="@color/black"
-            android:textSize="17dp" />
+            android:textSize="17dp"
+            android:textIsSelectable="false"
+            />
 
         <ImageButton
             android:id="@+id/settings_acilis_buton"

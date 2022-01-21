@@ -2,6 +2,7 @@ package com.peseca.browser;
 
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -10,11 +11,19 @@ import android.graphics.BitmapFactory;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.ActionMode;
+import android.view.DragEvent;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.webkit.URLUtil;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
@@ -26,6 +35,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Date;
@@ -63,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         webView_main = findViewById(R.id.webview_main);
         progressbar_main = findViewById(R.id.progress_bar);
         error_page = findViewById(R.id.error_webview);
-
 
         // Some settings for webview
         webView_main.getSettings().setJavaScriptEnabled(true);
@@ -140,16 +149,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Making search
-         search_btn_main.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
-                 arama_sonuc = url_edittext.getText().toString();
-                 makeSearch();
-             }
+         search_btn_main.setOnClickListener(view -> {
+             arama_sonuc = url_edittext.getText().toString();
+             makeSearch();
          });
 
          // Opening Settings Page
         settings_acilis_buton.setOnClickListener(v -> settings_acilis());
+
+
     }
 
     //Opening External Links In App
@@ -163,6 +171,8 @@ public class MainActivity extends AppCompatActivity {
             isCameFromExternalApp = true;
         }
     }
+
+
 
     //Settings Part Opening
     public void settings_acilis() {
@@ -197,7 +207,6 @@ public class MainActivity extends AppCompatActivity {
 
         private View mCustomView;
         private WebChromeClient.CustomViewCallback mCustomViewCallback;
-        protected FrameLayout mFullscreenContainer;
         private int mOriginalOrientation;
         private int mOriginalSystemUiVisibility;
 
@@ -238,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         webView_main.saveState(outState);
     }
@@ -249,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
         webView_main.restoreState(savedInstanceState);
     }
 
-    //Function for making searchs
+    //Function for making searches
     public void makeSearch(){
         arama_sonuc = url_edittext.getText().toString();
         webView_main.setVisibility(View.VISIBLE);
@@ -310,7 +319,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         // Checks the orientation of the screen
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
