@@ -93,8 +93,7 @@
             android:textColorHighlight="@color/arkaplan"
             android:textColorHint="@color/black"
             android:textIsSelectable="false"
-            android:textSize="17dp"
-            />
+            android:textSize="17dp" />
 
         <ImageButton
             android:id="@+id/settings_acilis_buton"

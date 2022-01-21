@@ -79,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
         webView_main.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         webView_main.getSettings().setSupportMultipleWindows(true);
         webView_main.getSettings().setBuiltInZoomControls(true);
+
+
+
         webView_main.setWebViewClient(new WebViewClient() {
             @Override
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
@@ -156,8 +159,6 @@ public class MainActivity extends AppCompatActivity {
 
          // Opening Settings Page
         settings_acilis_buton.setOnClickListener(v -> settings_acilis());
-
-
     }
 
     //Opening External Links In App
