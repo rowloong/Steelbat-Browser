@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean isCameFromExternalApp = false;
     public String arama_sonuc;
     public boolean isNewerVersionAvailable;
+    public boolean isCleaned = false;
 
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -65,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        isCleaned= true;
 
         // findViewByIds Are Here
         url_edittext = findViewById(R.id.url_edittext);
@@ -188,18 +191,24 @@ public class MainActivity extends AppCompatActivity {
             finishAndRemoveTask();
             finish();
         } else {
-            if (is_error_occured) {
-                error_page.setVisibility(View.INVISIBLE);
-                webView_main.setVisibility(View.INVISIBLE);
-                is_error_occured = false;
-                url_edittext.getText().clear();
-            } else {
-                if (webView_main.canGoBack()) {
-                    webView_main.goBack();
-                } else {
+            if (!isCleaned) {
+                if (is_error_occured) {
+                    error_page.setVisibility(View.INVISIBLE);
                     webView_main.setVisibility(View.INVISIBLE);
+                    is_error_occured = false;
                     url_edittext.getText().clear();
+                    isCleaned = true;
+                } else {
+                    if (webView_main.canGoBack()) {
+                        webView_main.goBack();
+                    } else {
+                        webView_main.setVisibility(View.INVISIBLE);
+                        url_edittext.getText().clear();
+                        isCleaned = true;
+                    }
                 }
+            } else {
+                super.onBackPressed();
             }
         }
     }
@@ -261,6 +270,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Function for making searches
     public void makeSearch(){
+        isCleaned = false;
         arama_sonuc = url_edittext.getText().toString();
         webView_main.setVisibility(View.VISIBLE);
         if (arama_sonuc.contains(".")) {
