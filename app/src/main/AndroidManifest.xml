@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/app_icon_bat"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Softaxolotl"
+        android:theme="@style/Theme.Steelbat"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".NewVersionActivity"

@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Softaxolotl" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Steelbat" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/kapali_mavi</item>
         <item name="colorPrimaryVariant">@color/kapali_mavi</item>
