@@ -30,7 +30,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class  MainActivity extends AppCompatActivity {
 
     EditText url_edittext;
     ImageButton settings_acilis_buton;
@@ -333,7 +333,7 @@ public class MainActivity extends AppCompatActivity {
         String currentMonth = (new SimpleDateFormat("MM", Locale.getDefault()).format(new Date()));
         String currentYear = (new SimpleDateFormat("yyyy", Locale.getDefault()).format(new Date()));
         int currentYearAndMonth = Integer.parseInt(currentYear+currentMonth);
-        if (currentYearAndMonth > 202208){
+        if (currentYearAndMonth > 202308){
             SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putBoolean("isNewerVersionAvailable", true);
